@@ -1,0 +1,13 @@
+=== Pohon ===
+(module (ERROR (string (string_start) (string_content) (string_end))))
+
+=== Anak langsung root ===
+ERROR bernama
+
+=== Anak node bernama pertama ===
+print anonim
+( anonim
+string bernama
+
+=== Status error ===
+has_error: True

@@ -1,0 +1,17 @@
+=== Pohon ===
+(module (ERROR (identifier) (parameters (identifier)) (identifier) (expression_statement (binary_operator left: (string (string_start) (string_content) (string_end)) right: (identifier))) (return_statement (identifier))))
+
+=== Anak langsung root ===
+ERROR bernama
+
+=== Anak node bernama pertama ===
+def anonim
+identifier bernama
+parameters bernama
+identifier bernama
+= anonim
+expression_statement bernama
+return_statement bernama
+
+=== Status error ===
+has_error: True
