@@ -1,0 +1,12 @@
+.venv-win/
+/tools/
+__pycache__/
+*.pyc
+*.log
+
+# sumber laporan dan aset mentah, tidak ikut repositori
+/laporan/
+
+# berkas hasil generate tree-sitter
+tugas-4/tree-sitter-filter/src/grammar.json
+tugas-4/tree-sitter-filter/src/node-types.json
