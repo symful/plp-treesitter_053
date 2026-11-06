@@ -1,0 +1,14 @@
+=== Pohon ===
+(module (class_definition name: (identifier) body: (block (function_definition name: (identifier) parameters: (parameters (identifier) (identifier)) body: (block (expression_statement (assignment left: (attribute object: (identifier) attribute: (identifier)) right: (identifier))))) (function_definition name: (identifier) parameters: (parameters (identifier) (identifier)) body: (block (expression_statement (assignment left: (attribute object: (identifier) attribute: (identifier)) right: (binary_operator left: (attribute object: (identifier) attribute: (identifier)) right: (identifier)))) (return_statement (attribute object: (identifier) attribute: (identifier))))))))
+
+=== Anak langsung root ===
+class_definition bernama
+
+=== Anak node bernama pertama ===
+class anonim
+identifier bernama
+: anonim
+block bernama
+
+=== Status error ===
+has_error: False

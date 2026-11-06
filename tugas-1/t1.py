@@ -1,3 +1,4 @@
+import sys
 import tree_sitter_python as tspython
 from tree_sitter import Language, Parser
 
@@ -8,6 +9,14 @@ from tree_sitter import Language, Parser
 
 parser = Parser(Language(tspython.language()))
 
-kode = b"x = 1\n"
-tree = parser.parse(kode)
+berkas = sys.argv[1]
+with open(berkas, "rb") as f:
+    tree = parser.parse(f.read())
+
+print("=== Pohon ===")
 print(tree.root_node)
+
+print()
+print("=== Anak bernama root ===")
+for anak in tree.root_node.named_children:
+    print(anak.type)

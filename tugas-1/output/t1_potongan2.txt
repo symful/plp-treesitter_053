@@ -1,0 +1,12 @@
+=== Pohon ===
+(module (expression_statement (assignment left: (identifier) right: (integer))) (if_statement condition: (comparison_operator (identifier) (integer)) consequence: (block (expression_statement (assignment left: (identifier) right: (string (string_start) (string_content) (string_end))))) alternative: (else_clause body: (block (expression_statement (assignment left: (identifier) right: (string (string_start) (string_content) (string_end))))))))
+
+=== Anak langsung root ===
+expression_statement bernama
+if_statement bernama
+
+=== Anak node bernama pertama ===
+assignment bernama
+
+=== Status error ===
+has_error: False
