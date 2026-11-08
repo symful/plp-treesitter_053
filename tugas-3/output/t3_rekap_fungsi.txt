@@ -1,0 +1,7 @@
+nama fungsi | jumlah parameter
+sapaan | 1
+rata_rata | 1
+simpan | 3
+__init__ | 3
+tampil | 1
+contoh_import | 0
