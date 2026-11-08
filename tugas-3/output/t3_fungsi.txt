@@ -1,0 +1,12 @@
+@nama  baris 6: sapaan
+@nama  baris 29: tampil
+@nama  baris 25: __init__
+@nama  baris 18: simpan
+@nama  baris 11: rata_rata
+@nama  baris 33: contoh_import
+@params  baris 6: (nama)
+@params  baris 29: (self)
+@params  baris 18: (teks, berkas, mode="w")
+@params  baris 25: (self, judul, penulis)
+@params  baris 11: (angka)
+@params  baris 33: ()
