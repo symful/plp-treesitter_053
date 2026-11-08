@@ -1,0 +1,12 @@
+@doc  baris 1: """Modul kecil untuk mengolah data penjualan toko.
+
+Dipakai di tugas kuliah: membaca data penjualan dari file CSV sederhana,
+menghitung total, lalu menampilkan ringkasan per kasir.
+
+Nama  : Kemal Ardian
+NIM   : 251524053
+Kelas : 2B
+"""
+@doc  baris 33: """Kumpulan baris penjualan beserta perhitungannya."""
+@doc  baris 16: """Satu baris data penjualan."""
+@doc  baris 77: """Baca file CSV dengan kolom tanggal, kasir, barang, jumlah, harga."""

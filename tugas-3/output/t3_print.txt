@@ -1,0 +1,14 @@
+@fn  baris 7: print
+@fn  baris 30: print
+@fn  baris 19: print
+@fn  baris 13: print
+@fn  baris 35: print
+@fn  baris 36: print
+@fn  baris 37: print
+@args  baris 7: ("Halo", nama)
+@args  baris 30: (self.judul, "oleh", self.penulis)
+@args  baris 13: ("Data kosong")
+@args  baris 19: ("menyimpan", berkas)
+@args  baris 35: (os.getcwd())
+@args  baris 36: (sys.version)
+@args  baris 37: (jalur.exists())

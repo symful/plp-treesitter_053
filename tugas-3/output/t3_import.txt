@@ -1,0 +1,3 @@
+@modul  baris 1: os
+@modul  baris 3: pathlib
+@modul  baris 2: sys
