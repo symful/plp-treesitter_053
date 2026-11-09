@@ -4,11 +4,20 @@ module.exports = grammar({
   extras: $ => [/\s/],
 
   rules: {
-    query: $ => $.comparison,
+    query: $ => $._expr,
 
-    comparison: $ => seq($.identifier, '=', $.string),
+    _expr: $ => $.comparison,
 
-    identifier: $ => /[a-zA-Z_][a-zA-Z0-9_.]*/,
+    comparison: $ => seq(
+      $.identifier,
+      choice('=', '!=', '>', '<', '>=', '<='),
+      $._value,
+    ),
+
+    _value: $ => choice($.string, $.number),
+
     string: $ => /"[^"]*"/,
+    number: $ => /\d+(\.\d+)?/,
+    identifier: $ => /[a-zA-Z_][a-zA-Z0-9_.]*/,
   }
 });
