@@ -28,9 +28,10 @@ module.exports = grammar({
 
     parenthesized: $ => seq('(', $._expr, ')'),
 
-    _value: $ => choice($.string, $.number),
+    _value: $ => choice($.string, $.number, $.boolean),
 
     string: $ => /"[^"]*"/,
+    boolean: $ => choice('true', 'false'),
     number: $ => /\d+(\.\d+)?/,
     identifier: $ => /[a-zA-Z_][a-zA-Z0-9_.]*/,
   }

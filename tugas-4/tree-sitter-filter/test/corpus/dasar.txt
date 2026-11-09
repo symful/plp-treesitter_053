@@ -54,3 +54,17 @@ kurung mengubah pengelompokan
       field: (identifier)
       value: (number))))
 
+==================
+not dan boolean
+==================
+
+not archived = true
+
+---
+
+(query
+  (not_expression
+    operand: (comparison
+      field: (identifier)
+      value: (boolean))))
+
