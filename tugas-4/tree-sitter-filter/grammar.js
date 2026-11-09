@@ -3,16 +3,23 @@ module.exports = grammar({
 
   extras: $ => [/\s/],
 
+  word: $ => $.identifier,
+
   rules: {
     query: $ => $._expr,
 
-    _expr: $ => $.comparison,
+    _expr: $ => choice(
+      $.comparison,
+      $.and_expression,
+    ),
 
     comparison: $ => seq(
       $.identifier,
       choice('=', '!=', '>', '<', '>=', '<='),
       $._value,
     ),
+
+    and_expression: $ => seq($._expr, 'and', $._expr),
 
     _value: $ => choice($.string, $.number),
 
