@@ -84,3 +84,59 @@ status in ("open", "pending", "closed")
       (string)
       (string))))
 
+==================
+operator contains
+==================
+
+title contains "invoice"
+
+---
+
+(query
+  (contains_expression
+    field: (identifier)
+    value: (string)))
+
+==================
+tiga jenis nilai dalam satu query
+==================
+
+priority >= 2.5 and active = false and owner = "budi"
+
+---
+
+(query
+  (and_expression
+    left: (and_expression
+      left: (comparison
+        field: (identifier)
+        value: (number))
+      right: (comparison
+        field: (identifier)
+        value: (boolean)))
+    right: (comparison
+      field: (identifier)
+      value: (string))))
+
+==================
+nama field bertitik
+==================
+
+customer.city = "bandung" and not (priority < 3 or archived = true)
+
+---
+
+(query
+  (and_expression
+    left: (comparison
+      field: (identifier)
+      value: (string))
+    right: (not_expression
+      operand: (parenthesized
+        (or_expression
+          left: (comparison
+            field: (identifier)
+            value: (number))
+          right: (comparison
+            field: (identifier)
+            value: (boolean)))))))

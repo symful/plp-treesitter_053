@@ -2,7 +2,6 @@ module.exports = grammar({
   name: 'filter',
 
   extras: $ => [/\s/],
-
   word: $ => $.identifier,
 
   rules: {
@@ -11,6 +10,7 @@ module.exports = grammar({
     _expr: $ => choice(
       $.comparison,
       $.in_expression,
+      $.contains_expression,
       $.and_expression,
       $.or_expression,
       $.not_expression,
@@ -36,16 +36,24 @@ module.exports = grammar({
       ')',
     ),
 
+    contains_expression: $ => seq(
+      field('field', $.identifier),
+      'contains',
+      field('value', $._value),
+    ),
+
     or_expression: $ => prec.left(1, seq(
       field('left', $._expr),
       'or',
       field('right', $._expr),
     )),
+
     and_expression: $ => prec.left(2, seq(
       field('left', $._expr),
       'and',
       field('right', $._expr),
     )),
+
     not_expression: $ => prec(3, seq(
       'not',
       field('operand', $._expr),
@@ -56,8 +64,8 @@ module.exports = grammar({
     _value: $ => choice($.string, $.number, $.boolean),
 
     string: $ => /"[^"]*"/,
-    boolean: $ => choice('true', 'false'),
     number: $ => /\d+(\.\d+)?/,
+    boolean: $ => choice('true', 'false'),
     identifier: $ => /[a-zA-Z_][a-zA-Z0-9_.]*/,
   }
 });
