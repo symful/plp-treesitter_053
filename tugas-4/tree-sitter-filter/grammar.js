@@ -10,6 +10,7 @@ module.exports = grammar({
 
     _expr: $ => choice(
       $.comparison,
+      $.in_expression,
       $.and_expression,
       $.or_expression,
       $.not_expression,
@@ -20,6 +21,19 @@ module.exports = grammar({
       field('field', $.identifier),
       field('operator', choice('=', '!=', '>', '<', '>=', '<=')),
       field('value', $._value),
+    ),
+
+    in_expression: $ => seq(
+      field('field', $.identifier),
+      'in',
+      field('values', $.value_list),
+    ),
+
+    value_list: $ => seq(
+      '(',
+      $._value,
+      repeat(seq(',', $._value)),
+      ')',
     ),
 
     or_expression: $ => prec.left(1, seq(

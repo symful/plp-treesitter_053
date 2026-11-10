@@ -68,3 +68,19 @@ not archived = true
       field: (identifier)
       value: (boolean))))
 
+==================
+operator in dengan tiga nilai
+==================
+
+status in ("open", "pending", "closed")
+
+---
+
+(query
+  (in_expression
+    field: (identifier)
+    values: (value_list
+      (string)
+      (string)
+      (string))))
+
