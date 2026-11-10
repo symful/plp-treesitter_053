@@ -1,0 +1,2 @@
+; Nilai string
+(string) @string
