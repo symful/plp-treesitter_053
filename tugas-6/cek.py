@@ -18,6 +18,16 @@ Q_FUNGSI = Query(PY, '(function_definition name: (identifier) @nama) @fungsi')
 LEWATI = {"venv", ".venv", ".git", "node_modules", "__pycache__", "build"}
 
 
+def cari_error(node):
+    if node.is_error or node.is_missing:
+        return node
+    for anak in node.children:
+        hasil = cari_error(anak)
+        if hasil:
+            return hasil
+    return None
+
+
 def cek_file(path):
     tree = parser.parse(path.read_bytes())
 
@@ -31,6 +41,10 @@ def cek_file(path):
         baris = fungsi.end_point[0] - fungsi.start_point[0] + 1
         if baris > 30:
             print(f"{path}:{fungsi.start_point[0] + 1}: PANJANG {nama} {baris} baris")
+
+    if tree.root_node.has_error:
+        salah = cari_error(tree.root_node)
+        print(f"{path}:{salah.start_point[0] + 1}: ERROR sintaks {salah.type}")
 
 
 for path in Path(sys.argv[1]).rglob("*.py"):
