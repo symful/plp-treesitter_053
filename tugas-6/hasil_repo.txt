@@ -1,0 +1,63 @@
+C:\temp\requests\tests\test_lowlevel.py:127: PANJANG test_digestauth_401_count_reset_on_redirect 63 baris
+C:\temp\requests\tests\test_lowlevel.py:192: PANJANG test_digestauth_401_only_sent_once 44 baris
+C:\temp\requests\tests\test_lowlevel.py:238: PANJANG test_digestauth_only_on_4xx 35 baris
+C:\temp\requests\tests\test_lowlevel.py:308: PANJANG test_redirect_rfc1808_to_non_ascii_location 32 baris
+C:\temp\requests\tests\test_lowlevel.py:364: PANJANG test_fragment_update_on_redirect 41 baris
+C:\temp\requests\tests\test_requests.py:450: PANJANG test_cookielib_cookiejar_on_redirect 31 baris
+C:\temp\requests\tests\test_requests.py:683: PANJANG test_basicauth_with_netrc 34 baris
+C:\temp\requests\tests\test_requests.py:841: PANJANG test_POSTBIN_SEEKED_OBJECT_WITH_NO_ITER 40 baris
+C:\temp\requests\tests\test_requests.py:1647: PANJANG test_transport_adapter_ordering 37 baris
+C:\temp\requests\tests\test_requests.py:2286: PANJANG test_custom_redirect_mixin 43 baris
+C:\temp\requests\tests\test_requests.py:2959: PANJANG test_different_connection_pool_for_tls_settings_verify_bundle_expired_cert 32 baris
+C:\temp\requests\tests\test_requests.py:2992: PANJANG test_different_connection_pool_for_tls_settings_verify_bundle_unexpired_cert 31 baris
+C:\temp\requests\tests\test_requests.py:3024: PANJANG test_different_connection_pool_for_mtls_settings 38 baris
+C:\temp\requests\tests\test_testserver.py:97: TODO # TODO: figure out why this sometimes fails when using pytest-xdist.
+C:\temp\requests\tests\test_utils.py:886: PANJANG test_should_bypass_proxies_win_registry 35 baris
+C:\temp\requests\src\requests\adapters.py:715: TODO # TODO: Remove this in 3.0.0: see #2811
+C:\temp\requests\src\requests\adapters.py:85: PANJANG _urllib3_request_context 35 baris
+C:\temp\requests\src\requests\adapters.py:269: PANJANG proxy_manager_for 37 baris
+C:\temp\requests\src\requests\adapters.py:307: PANJANG cert_verify 57 baris
+C:\temp\requests\src\requests\adapters.py:365: PANJANG build_response 37 baris
+C:\temp\requests\src\requests\adapters.py:403: PANJANG build_connection_pool_key_attributes 51 baris
+C:\temp\requests\src\requests\adapters.py:455: PANJANG get_connection_with_tls_context 56 baris
+C:\temp\requests\src\requests\adapters.py:512: PANJANG get_connection 42 baris
+C:\temp\requests\src\requests\adapters.py:565: PANJANG request_url 33 baris
+C:\temp\requests\src\requests\adapters.py:634: PANJANG send 115 baris
+C:\temp\requests\src\requests\api.py:24: PANJANG request 48 baris
+C:\temp\requests\src\requests\auth.py:34: PANJANG _basic_auth_str 42 baris
+C:\temp\requests\src\requests\auth.py:157: PANJANG build_digest_header 110 baris
+C:\temp\requests\src\requests\auth.py:273: PANJANG handle_401 47 baris
+C:\temp\requests\src\requests\cookies.py:494: PANJANG create_cookie 35 baris
+C:\temp\requests\src\requests\help.py:67: PANJANG info 57 baris
+C:\temp\requests\src\requests\hooks.py:29: TODO # TODO: response is the only one
+C:\temp\requests\src\requests\models.py:687: TODO # TODO: can be fixed by flipping the conditionals
+C:\temp\requests\src\requests\models.py:1016: TODO # TODO: remove cast after iter_lines rewrite
+C:\temp\requests\src\requests\models.py:183: PANJANG _encode_files 69 baris
+C:\temp\requests\src\requests\models.py:323: PANJANG __init__ 33 baris
+C:\temp\requests\src\requests\models.py:483: PANJANG prepare_url 81 baris
+C:\temp\requests\src\requests\models.py:576: PANJANG prepare_body 77 baris
+C:\temp\requests\src\requests\models.py:765: PANJANG __init__ 46 baris
+C:\temp\requests\src\requests\models.py:914: PANJANG iter_content 64 baris
+C:\temp\requests\src\requests\models.py:994: PANJANG iter_lines 39 baris
+C:\temp\requests\src\requests\models.py:1054: PANJANG text 36 baris
+C:\temp\requests\src\requests\models.py:1091: PANJANG json 34 baris
+C:\temp\requests\src\requests\sessions.py:154: PANJANG should_strip_auth 31 baris
+C:\temp\requests\src\requests\sessions.py:186: PANJANG resolve_redirects 122 baris
+C:\temp\requests\src\requests\sessions.py:334: PANJANG rebuild_proxies 35 baris
+C:\temp\requests\src\requests\sessions.py:442: PANJANG __init__ 62 baris
+C:\temp\requests\src\requests\sessions.py:511: PANJANG prepare_request 45 baris
+C:\temp\requests\src\requests\sessions.py:557: PANJANG request 97 baris
+C:\temp\requests\src\requests\sessions.py:752: PANJANG send 78 baris
+C:\temp\requests\src\requests\sessions.py:831: PANJANG merge_environment_settings 38 baris
+C:\temp\requests\src\requests\utils.py:99: PANJANG proxy_bypass_registry 37 baris
+C:\temp\requests\src\requests\utils.py:160: PANJANG super_len 69 baris
+C:\temp\requests\src\requests\utils.py:231: PANJANG get_netrc_auth 50 baris
+C:\temp\requests\src\requests\utils.py:290: PANJANG extract_zipped_paths 36 baris
+C:\temp\requests\src\requests\utils.py:440: PANJANG parse_dict_header 32 baris
+C:\temp\requests\src\requests\utils.py:633: PANJANG get_unicode_from_response 39 baris
+C:\temp\requests\src\requests\utils.py:810: PANJANG should_bypass_proxies 61 baris
+C:\temp\requests\src\requests\utils.py:965: PANJANG parse_header_links 35 baris
+C:\temp\requests\src\requests\_types.py:60: TODO # TODO: move to collections.abc when Python >= 3.12
+C:\temp\requests\src\requests\_types.py:61: TODO # TODO: move to typing when Python >= 3.13
+C:\temp\requests\src\requests\__init__.py:60: PANJANG check_compatibility 37 baris
+C:\temp\requests\tests\testserver\server.py:139: PANJANG __init__ 31 baris
