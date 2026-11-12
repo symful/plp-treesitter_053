@@ -5,8 +5,12 @@
 expression_statement bernama
 expression_statement bernama
 
-=== Anak node bernama pertama ===
-assignment bernama
+=== children vs named_children ===
+node: expression_statement
+children (1):
+  [0] assignment (bernama)
+named_children (1):
+  [0] assignment
 
 === Status error ===
 has_error: True

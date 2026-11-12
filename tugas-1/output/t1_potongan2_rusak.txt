@@ -4,10 +4,14 @@
 === Anak langsung root ===
 ERROR bernama
 
-=== Anak node bernama pertama ===
-print anonim
-( anonim
-string bernama
+=== children vs named_children ===
+node: ERROR
+children (3):
+  [0] print (anonim)
+  [1] ( (anonim)
+  [2] string (bernama)
+named_children (1):
+  [0] string
 
 === Status error ===
 has_error: True

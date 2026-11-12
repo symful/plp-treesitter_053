@@ -4,12 +4,18 @@
 === Anak langsung root ===
 function_definition bernama
 
-=== Anak node bernama pertama ===
-def anonim
-identifier bernama
-parameters bernama
-: anonim
-block bernama
+=== children vs named_children ===
+node: function_definition
+children (5):
+  [0] def (anonim)
+  [1] identifier (bernama, field=name)
+  [2] parameters (bernama, field=parameters)
+  [3] : (anonim)
+  [4] block (bernama, field=body)
+named_children (3):
+  [0] identifier
+  [1] parameters
+  [2] block
 
 === Status error ===
 has_error: False

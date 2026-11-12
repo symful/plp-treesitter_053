@@ -4,14 +4,22 @@
 === Anak langsung root ===
 ERROR bernama
 
-=== Anak node bernama pertama ===
-def anonim
-identifier bernama
-parameters bernama
-identifier bernama
-= anonim
-expression_statement bernama
-return_statement bernama
+=== children vs named_children ===
+node: ERROR
+children (7):
+  [0] def (anonim)
+  [1] identifier (bernama)
+  [2] parameters (bernama)
+  [3] identifier (bernama)
+  [4] = (anonim)
+  [5] expression_statement (bernama)
+  [6] return_statement (bernama)
+named_children (5):
+  [0] identifier
+  [1] parameters
+  [2] identifier
+  [3] expression_statement
+  [4] return_statement
 
 === Status error ===
 has_error: True

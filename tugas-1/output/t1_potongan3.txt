@@ -4,11 +4,16 @@
 === Anak langsung root ===
 class_definition bernama
 
-=== Anak node bernama pertama ===
-class anonim
-identifier bernama
-: anonim
-block bernama
+=== children vs named_children ===
+node: class_definition
+children (4):
+  [0] class (anonim)
+  [1] identifier (bernama, field=name)
+  [2] : (anonim)
+  [3] block (bernama, field=body)
+named_children (2):
+  [0] identifier
+  [1] block
 
 === Status error ===
 has_error: False

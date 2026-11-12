@@ -5,8 +5,18 @@
 expression_statement bernama
 if_statement bernama
 
-=== Anak node bernama pertama ===
-assignment bernama
+=== children vs named_children ===
+node: if_statement
+children (5):
+  [0] if (anonim)
+  [1] comparison_operator (bernama, field=condition)
+  [2] : (anonim)
+  [3] block (bernama, field=consequence)
+  [4] else_clause (bernama, field=alternative)
+named_children (3):
+  [0] comparison_operator
+  [1] block
+  [2] else_clause
 
 === Status error ===
 has_error: False
