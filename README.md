@@ -3,7 +3,7 @@
 Kemal Ardian (251524053), Kelas 2B, D-4 Teknik Informatika, Politeknik Negeri Bandung.
 Mata kuliah Programming Language Pragmatics.
 
-Repositori: https://github.com/symful/plp-treesitter
+Repositori: https://github.com/symful/plp-treesitter_053
 
 ## Isi folder
 

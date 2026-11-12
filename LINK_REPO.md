@@ -2,7 +2,7 @@
 
 Praktikum Tree-sitter - Kemal Ardian (251524053), Kelas 2B, D-4 Teknik Informatika.
 
-https://github.com/symful/plp-treesitter
+https://github.com/symful/plp-treesitter_053
 
 ## Isi repositori
 
