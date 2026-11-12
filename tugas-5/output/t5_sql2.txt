@@ -1,0 +1,2 @@
+SQL  : SELECT * FROM tickets WHERE ((NOT (archived = ?) AND status IN (?, ?)) AND title LIKE '%' || ? || '%')
+param: [1, 'open', 'pending', 'invoice']

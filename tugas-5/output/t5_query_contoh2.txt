@@ -1,0 +1,33 @@
+contoh2.filter
+  pattern: 0
+    capture: 0 - keyword, start: (0, 0), end: (0, 3), text: `not`
+  pattern: 5
+    capture: 5 - property, start: (0, 4), end: (0, 12), text: `archived`
+  pattern: 1
+    capture: 1 - operator, start: (0, 13), end: (0, 14), text: `=`
+  pattern: 4
+    capture: 4 - constant.builtin, start: (0, 15), end: (0, 19), text: `true`
+  pattern: 0
+    capture: 0 - keyword, start: (0, 20), end: (0, 23), text: `and`
+  pattern: 6
+    capture: 5 - property, start: (0, 24), end: (0, 30), text: `status`
+  pattern: 0
+    capture: 0 - keyword, start: (0, 31), end: (0, 33), text: `in`
+  pattern: 8
+    capture: 6 - punctuation.bracket, start: (0, 34), end: (0, 35), text: `(`
+  pattern: 2
+    capture: 2 - string, start: (0, 35), end: (0, 41), text: `"open"`
+  pattern: 9
+    capture: 7 - punctuation.delimiter, start: (0, 41), end: (0, 42), text: `,`
+  pattern: 2
+    capture: 2 - string, start: (0, 43), end: (0, 52), text: `"pending"`
+  pattern: 8
+    capture: 6 - punctuation.bracket, start: (0, 52), end: (0, 53), text: `)`
+  pattern: 0
+    capture: 0 - keyword, start: (0, 54), end: (0, 57), text: `and`
+  pattern: 7
+    capture: 5 - property, start: (0, 58), end: (0, 63), text: `title`
+  pattern: 0
+    capture: 0 - keyword, start: (0, 64), end: (0, 72), text: `contains`
+  pattern: 2
+    capture: 2 - string, start: (0, 73), end: (0, 82), text: `"invoice"`

@@ -1,0 +1,27 @@
+contoh.filter
+  pattern: 5
+    capture: 5 - property, start: (0, 0), end: (0, 6), text: `status`
+  pattern: 1
+    capture: 1 - operator, start: (0, 7), end: (0, 8), text: `=`
+  pattern: 2
+    capture: 2 - string, start: (0, 9), end: (0, 15), text: `"open"`
+  pattern: 0
+    capture: 0 - keyword, start: (0, 16), end: (0, 19), text: `and`
+  pattern: 8
+    capture: 6 - punctuation.bracket, start: (0, 20), end: (0, 21), text: `(`
+  pattern: 5
+    capture: 5 - property, start: (0, 21), end: (0, 29), text: `priority`
+  pattern: 1
+    capture: 1 - operator, start: (0, 30), end: (0, 31), text: `>`
+  pattern: 3
+    capture: 3 - number, start: (0, 32), end: (0, 33), text: `2`
+  pattern: 0
+    capture: 0 - keyword, start: (0, 34), end: (0, 36), text: `or`
+  pattern: 5
+    capture: 5 - property, start: (0, 37), end: (0, 42), text: `owner`
+  pattern: 1
+    capture: 1 - operator, start: (0, 43), end: (0, 44), text: `=`
+  pattern: 2
+    capture: 2 - string, start: (0, 45), end: (0, 51), text: `"budi"`
+  pattern: 8
+    capture: 6 - punctuation.bracket, start: (0, 51), end: (0, 52), text: `)`

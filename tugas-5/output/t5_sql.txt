@@ -1,0 +1,2 @@
+SQL  : SELECT * FROM tickets WHERE (status = ? AND (priority > ? OR owner = ?))
+param: ['open', 2, 'budi']
