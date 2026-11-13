@@ -7,6 +7,9 @@ __pycache__/
 # sumber laporan dan aset mentah, tidak ikut repositori
 /laporan/
 
+# tangkapan layar lama
+/dokumentasi/
+
 # berkas hasil generate tree-sitter
 tugas-4/tree-sitter-filter/src/grammar.json
 tugas-4/tree-sitter-filter/src/node-types.json
