@@ -1,3 +1,4 @@
+import re
 import sys
 from pathlib import Path
 
@@ -12,10 +13,34 @@ from tree_sitter import Language, Parser, Query, QueryCursor
 PY = Language(tspython.language())
 parser = Parser(PY)
 
+# Console Windows kadang memakai cp1252, yang tidak bisa mencetak karakter
+# pengganti (U+FFFD) hasil decode file non-UTF-8. Paksa keluaran UTF-8 dan
+# ganti karakter yang tetap tidak bisa ditulis, jangan sampai skrip berhenti.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 Q_TODO = Query(PY, '((comment) @c (#match? @c "TODO|FIXME"))')
+Q_KOMENTAR = Query(PY, '(comment) @c')
 Q_FUNGSI = Query(PY, '(function_definition name: (identifier) @nama) @fungsi')
 
 LEWATI = {"venv", ".venv", ".git", "node_modules", "__pycache__", "build"}
+
+
+def komentar_todo(tree):
+    """Ambil komentar TODO/FIXME.
+
+    Predikat #match? mendekode teks node sebagai UTF-8. Pada berkas latin-1,
+    dekode itu melempar UnicodeDecodeError sebelum kita sempat mencetak apa pun.
+    Kalau itu terjadi, query cadangan mengambil semua komentar lalu menyaring
+    teksnya dengan errors="replace".
+    """
+    try:
+        yield from QueryCursor(Q_TODO).captures(tree.root_node).get("c", [])
+    except UnicodeDecodeError:
+        for node in QueryCursor(Q_KOMENTAR).captures(tree.root_node).get("c", []):
+            teks = node.text.decode(errors="replace")
+            if re.search(r"TODO|FIXME", teks):
+                yield node
 
 
 def cari_error(node):
@@ -31,9 +56,10 @@ def cari_error(node):
 def cek_file(path):
     tree = parser.parse(path.read_bytes())
 
-    for node in QueryCursor(Q_TODO).captures(tree.root_node).get("c", []):
+    for node in komentar_todo(tree):
         teks = node.text.decode(errors="replace").strip()
-        print(f"{path}:{node.start_point[0] + 1}: TODO {teks}")
+        jenis = "FIXME" if "FIXME" in teks else "TODO"
+        print(f"{path}:{node.start_point[0] + 1}: {jenis} {teks}")
 
     for _, cap in QueryCursor(Q_FUNGSI).matches(tree.root_node):
         fungsi = cap["fungsi"][0]
@@ -47,7 +73,11 @@ def cek_file(path):
         print(f"{path}:{salah.start_point[0] + 1}: ERROR sintaks {salah.type}")
 
 
-for path in Path(sys.argv[1]).rglob("*.py"):
-    if LEWATI & set(path.parts):
-        continue
+target = Path(sys.argv[1])
+if target.is_file():
+    berkas = [target]
+else:
+    berkas = [p for p in target.rglob("*.py") if not (LEWATI & set(p.parts))]
+
+for path in berkas:
     cek_file(path)

@@ -1,0 +1,5 @@
+uji\latin1.py:2: TODO # TODO: nama berkas caf� sudah usang
+uji\panjang.py:1: PANJANG hitung_rekap 31 baris
+uji\rusak.py:1: ERROR sintaks ERROR
+uji\todo.py:10: TODO # TODO: tambahkan penanganan berkas kosong
+uji\todo.py:13: FIXME # FIXME: belum menutup berkas kalau terjadi error
